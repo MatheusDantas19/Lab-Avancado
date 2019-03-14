@@ -1,0 +1,10 @@
+const N=4
+range T=0..N
+BUFFER = BUFFER[0],
+BUFFER[i:T]
+	= (when(i<N) put->BUFFER[i+1]
+	  |when(i>0) get->BUFFER[i-1]).
+PRODUCER = (put->PRODUCER).
+CONSUMER = (get->CONSUMER).
+|| BOUNDEDBUFFER =
+(PRODUCER || BUFFER || CONSUMER).

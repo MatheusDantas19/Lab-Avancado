@@ -1,0 +1,5 @@
+PERSON = (weekend -> SLEEP | weekday -> SLEEP2),
+SLEEP = (sleep -> ONE),
+ONE = ({play,shop}->PERSON),
+SLEEP2 = (sleep -> WORK),
+WORK =(work -> PERSON).

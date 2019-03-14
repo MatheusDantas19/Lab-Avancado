@@ -1,0 +1,5 @@
+const VACANCY = 10
+property PARK = PARK[0],
+PARK[i:0..VACANCY] = (when(i<VACANCY) goIn -> PARK[i+1]
+ |when(i>0) goOut -> PARK[i-1]
+).

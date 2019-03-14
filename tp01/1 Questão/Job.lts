@@ -1,0 +1,4 @@
+JOB = (arrive -> WORK),
+WORK = (work -> LEAVE),
+LEAVE = (leave -> JOB).
+

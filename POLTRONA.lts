@@ -1,0 +1,10 @@
+POLTRONA = (cadeira1 ->reservado->V1 | cadeira2->reservado->V2 | cadeira3->reservado ->V3),
+V1 = (cadeira2->reservado->V12 | cadeira3->reservado->V13),
+V12 =(cadeira3->reservado-> STOP),
+V13 =(cadeira2->reservado->STOP),
+V2 = (cadeira1->reservado->V21 | cadeira3->reservado->V23),
+V21 =(cadeira3->reservado-> STOP),
+V23 =(cadeira1->reservado->STOP),
+V3 = (cadeira1->reservado->V31 | cadeira2->reservado->V32),
+V31 =(cadeira2->reservado-> STOP),
+V32 =(cadeira1->reservado->STOP).

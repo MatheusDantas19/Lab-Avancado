@@ -1,0 +1,3 @@
+Para exercutar o applet:
+Compilar o arquivo number: javac number.java
+Em seguida executar o html: appletviewer number.html

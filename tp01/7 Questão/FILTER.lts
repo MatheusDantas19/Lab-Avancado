@@ -1,0 +1,7 @@
+FILTER = (in[5]->discard->FILTER
+ |in[4]->discard->FILTER
+ |in[3]->discard->FILTER
+ |in[2]->out[2]->FILTER
+|in[1]->out[1]->FILTER
+|in[0]->out[0]->FILTER
+ ). 

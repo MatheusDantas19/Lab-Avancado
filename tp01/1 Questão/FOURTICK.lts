@@ -1,0 +1,2 @@
+FOURTICK (N=4) = FOURTICK[0],
+FOURTICK[i:0..N] = (when(i<N) tick->FOURTICK[i+1]).

@@ -1,0 +1,3 @@
+UP = (up->up->up->up->upAux->UP). 
+DOWN = (upAux->down->DOWN). 
+||ELEMENT = (UP || DOWN).

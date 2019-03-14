@@ -1,0 +1,8 @@
+P = (a->b->P).
+Q = (c->b->Q).
+||S1 = (P || Q).
+S2 = (a->c->b->S2 | c->a->b->S2).
+
+//Como P E Q são uma composição de processos que compartilham a ação “b
+//Para acessar na ação “b” tem que executar a->c se o processo for P||Q OU c->a se o processo for Q||P
+//Devido á isso S1 e S2 possuem o mesmo comportamento, tanto no || de S1 tanto | de S2.  

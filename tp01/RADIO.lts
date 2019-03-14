@@ -1,0 +1,9 @@
+RADIO = (on->ON),ON = (f[108]->MENU),MENU = (scan->SCAN | reset->RESET | off->RADIO),
+SCAN = (f[107]->MENU1 | lock->LOCK),MENU1 = (scan->SCAN1 | reset->RESET | off->RADIO),
+SCAN1 = (f[106]->MENU2 | lock->LOCK),MENU2 = (scan->SCAN2 | reset->RESET | off->RADIO),
+SCAN2 = (f[105]->MENU3 | lock->LOCK),MENU3 = (scan->SCAN3 | reset->RESET | off->RADIO),
+SCAN3 = (f[104]->MENU4 | lock->LOCK),MENU4 = (scan->SCAN4 | reset->RESET | off->RADIO),
+SCAN4 = (f[103]->MENU5 | lock->LOCK),MENU5 = (scan->SCAN5 | reset->RESET | off->RADIO),
+SCAN5 = (f[102]->MENU6 | lock->LOCK),MENU6 = (scan->SCAN6 | reset->RESET | off->RADIO),
+SCAN6 = (f[108]->MENU | lock->LOCK),LOCK = (end->STOP2 | reset->RESET),
+RESET = ( f[108]->MENU),STOP2 = (off->RADIO).

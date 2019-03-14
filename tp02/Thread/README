@@ -1,0 +1,27 @@
+Para executar a thread, ela está no MainRadio. As outras classes são os processos do Radio.
+Na classe MainRadio no método start estão as traces do Radio, com as seguintes respostas:
+on
+/*
+fm108
+scan
+fm107
+scan
+fm106
+scan
+lock
+reset
+fm108
+scan
+fm107
+scan
+fm106
+scan
+fm105
+scan
+fm104
+scan
+fm103
+scan
+fm102
+fm108
+*/

@@ -1,0 +1,9 @@
+DRINK = ([20] -> troco5p -> drink -> DRINK
+| [15] -> drink -> DRINK 
+| [10] -> OI | [5] -> OI2), 
+OI = ([5] -> drink -> DRINK | [10] -> troco5p -> drink -> DRINK 
+| [15] -> troco10p -> drink -> DRINK | [20] -> troco15p -> drink -> DRINK),
+OI2 = ([10] -> drink -> DRINK | [15] -> troco5p -> drink -> DRINK 
+| [20] -> troco10p -> drink -> DRINK | [5] ->OI3),
+OI3 = ([5] -> drink -> DRINK | [10] -> troco5p -> drink -> DRINK
+| [15] -> troco10p -> drink -> DRINK | [20] -> troco15p -> drink -> DRINK). 

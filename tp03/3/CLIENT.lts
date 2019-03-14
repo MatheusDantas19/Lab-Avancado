@@ -1,0 +1,3 @@
+CLIENT = (call->wait->continue->CLIENT).CLIENT1 = (call1->wait1->continue1->CLIENT1).
+SERVER = (request->service->reply->SERVER).||CLIENT_SERVER = (CLIENT ||CLIENT1 || SERVER)
+ /{call/request,call1/request}.

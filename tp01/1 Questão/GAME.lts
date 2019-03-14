@@ -1,0 +1,4 @@
+GAME = ({one,two}->THREE
+ |three->ONE),
+THREE= (win->GAME),
+ONE= (lose->GAME). 

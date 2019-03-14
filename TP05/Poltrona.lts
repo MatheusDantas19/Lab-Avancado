@@ -1,0 +1,10 @@
+const False = 0
+const True = 1
+range Bool = False..True
+const N = 2
+SEAT = SEAT[False],
+SEAT[reserved:Bool]
+= (when (!reserved) reserve-> SEAT[True]
+| when (reserved) reserve -> ERROR
+).
+||SEATS = (seat[1..N]:SEAT).

@@ -1,0 +1,2 @@
+MOVE =(ahead -> RIGHT),
+RIGHT =(right -> MOVE | left-> STOP).

@@ -1,0 +1,5 @@
+CLIENT = (call->wait->continue->CLIENT).CLIENT1 = (call1->wait1->continue1->CLIENT1).SERVER = (request->service->reply->SERVER
+| request-> (timeout->STOP)| request-> (timeout->STOP)).||CLIENT_SERVER = (CLIENT ||CLIENT1 || SERVER)
+ /{call/request,call1/request}.
+
+//EM QUANDO É CHEGADO NO PROCESSO TIMEOUT, O SERVIDOR É PARADO.

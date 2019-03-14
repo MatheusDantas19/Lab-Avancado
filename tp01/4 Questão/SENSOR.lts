@@ -1,0 +1,11 @@
+SENSOR = (level[9]->high->SENSOR
+ |level[8]->normal->SENSOR
+ |level[7]->normal->SENSOR
+ |level[6]->normal->SENSOR
+ |level[5]->normal->SENSOR
+ |level[4]->normal->SENSOR
+ |level[3]->normal->SENSOR
+ |level[2]->normal->SENSOR
+ |level[1]->low->SENSOR
+ |level[0]->low->SENSOR
+ ).

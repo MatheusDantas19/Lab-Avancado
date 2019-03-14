@@ -1,0 +1,3 @@
+BISTABLE = ([0] -> ZERO),
+ZERO = (trigger -> UM),
+UM = ([1] -> trigger -> BISTABLE).

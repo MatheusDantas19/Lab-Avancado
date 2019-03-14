@@ -1,0 +1,4 @@
+MEETING = (hello -> CONVERSE),
+CONVERSE = (converse -> GOODBYE),
+GOODBYE = (goodbye -> STOP).
+

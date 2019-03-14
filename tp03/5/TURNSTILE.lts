@@ -1,0 +1,4 @@
+TURNSTILE(N=4) = I[0],
+I[i:0..N] = (when(i<4) passageiro->I[i+1]|when(i==4) departamento->I[0]).
+CONTROLE   = (passageiro->CONTROLE).CARRO = (departamento->CARRO).	
+||COASTER = (CONTROLE||TURNSTILE||CARRO).

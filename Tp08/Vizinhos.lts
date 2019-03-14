@@ -1,0 +1,29 @@
+const N = 2 
+range T = 0..N 
+range ID= 1..N
+CAMPOS = CAMPOS[0][0], 
+CAMPOS[vizinho1:T][vizinho2:T] =  
+	(when (vizinho2==0) pessoa1[ID].entrar  -> CAMPOS[vizinho1+1][vizinho2]
+        |pessoa1[ID].sair    -> CAMPOS[vizinho1-1][vizinho2]
+        |when (vizinho1==0) pessoa2[ID].entrar -> CAMPOS[vizinho1][vizinho2+1]
+        |pessoa2[ID].sair   -> CAMPOS[vizinho1][vizinho2-1]
+	).
+COLHER = (entrar->sair->COLHER).
+BANDEIRALEVANTA   = C[1],
+C[i:ID]   = ([i].entrar -> C[i%N+1]).
+BANDEIRABAIXA   = C[1],
+C[i:ID]   = ([i].sair -> C[i%N+1]).
+||PROTOCOLO = ([ID]:COLHER || BANDEIRALEVANTA || BANDEIRABAIXA).
+||COLHERS = (pessoa1:PROTOCOLO || pessoa2:PROTOCOLO).
+||EntrarUmaPessoa = (COLHERS || CAMPOS ).
+||ConflitoColher = EntrarUmaPessoa >> {pessoa1[ID].sair,pessoa2[ID].sair}.
+fluent PESSOA1[i:ID]  = <pessoa1[i].entrar, pessoa1[i].sair>
+fluent PESSOA2[i:ID] = <pessoa2[i].entrar, pessoa2[i].sair>
+assert UNICA  = []!(exists[i:ID] PESSOAL1[i] && exists[j:ID] PESSOAL2[j])
+assert UNICA_ = []!(PESSOAL1[ID] && PESSOAL2[ID])
+assert PRIMEIRAPESSOA = <>pessoa1[1].entrar
+assert PESSOA1CRUZ  = []<>pessoa1[ID].entrar
+assert PESSOA2CRUZ = []<>pessoa2[ID].entrar
+assert CRUZ     = (PESSOA1CRUZ && PESSOA2CRUZ)
+assert FORTEPESSOA1 =  forall[i:ID] []<>pessoa1[i].entrar
+assert PESSOA1SAIR = [](pessoa1[1].entrar -> <>pessoa1[1].sair)
